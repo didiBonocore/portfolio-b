@@ -1,9 +1,8 @@
-
 const navigation = [
-  { name: 'About', href: '#' },
-  { name: 'Architecture', href: '#' },
-  { name: 'Social media creation', href: '#' },
-  { name: 'Graphic design', href: '#' },
+  { name: 'About', href: '/about' },
+  { name: 'Architecture', href: '/architecture' },
+  { name: 'Social media creation', href: '/social-media' },
+  { name: 'Graphic design', href: '/graphic-design' },
 ]
 
 export default function Nav() {
@@ -17,12 +16,12 @@ export default function Nav() {
               <img
                 className="h-10 w-auto"
                 src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
-                alt=""
+                alt="Website Logo"
               />
             </a>
             <div className="hidden ml-96 xl:ml-[36rem] space-x-8 lg:block">
               {navigation.map((link) => (
-                <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-indigo-50">
+                <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-stone-700">
                   {link.name}
                 </a>
               ))}

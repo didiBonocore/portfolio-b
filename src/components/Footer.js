@@ -7,21 +7,25 @@ const navigation = {
   ],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/barbara-alencar-pacheco-6b7759156/',
       icon: (props) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
+        <svg fill="currentColor" viewBox="0 50 512 512" {...props} >
+          <path 
             fillRule="evenodd"
-            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-            clipRule="evenodd"
+            d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+              C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+              M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+              c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+              s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"
+              clipRule="evenodd"
           />
         </svg>
       ),
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/ba.alencarpacheco/',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -34,7 +38,7 @@ const navigation = {
     },
     {
       name: 'Youtube',
-      href: '#',
+      href: 'https://www.youtube.com/c/BarbaraAlencarPacheco',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 16 16" {...props}>
           <path
@@ -66,7 +70,7 @@ export default function Footer() {
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
         {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+            <a key={item.name} href={item.href} target={"_blank"} className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
