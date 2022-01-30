@@ -1,28 +1,40 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
 import Nav from './components/Nav';
-import Cards from './components/Cards';
+import Home from './pages/Home';
+import About from './pages/About';
+import Architecture from './pages/Architecture';
+import Undergraduate from './project-pages/Undergraduate';
+import ArchitecturalProject from './project-pages/ArchitecturalProject';
+// import PlansSections from './project-pages/PlansSections';
+// import OperaPrima from './project-pages/OperaPrima';
+import SocialMedia from './pages/SocialMedia';
+import CafeProject from './project-pages/CafeProject';
+import GraphicDesign from './pages/GraphicDesign';
 import Footer from './components/Footer';
-import Contact from './components/Contact';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      < Nav />
-
-      <div className="bg-almost-green">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="mt-1 text-4xl font-extrabold font-poppins uppercase text-almost-black sm:text-5xl sm:tracking-tight lg:text-6xl">Barbara de Alencar Pacheco</p>
-            <p className="max-w-xl mt-5 mx-auto text-xl font-poppins text-white">Architect, Graphic Designer & Social Media Creator</p>
-          </div>
-        </div>
+    <Router>
+      <div className="App">
+        < Nav />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/architecture" component={Architecture} />
+            <Route path="/undergraduate-project" exact component={Undergraduate} />
+            {/* <Route path="/plans-sections" component={PlansSections} /> */}
+            {/* <Route path="/opera-prima" component={OperaPrima} /> */}
+            <Route path="/architectural-project" component={ArchitecturalProject} />
+          <Route path="/social-media" component={SocialMedia} />
+            <Route path="/cafe-project" component={CafeProject} />
+          <Route path="/graphic-design" component={GraphicDesign} />
+            <Route path="/social-media" component={SocialMedia} />
+        </Switch>
+        <Footer />
       </div>
-
-      < Cards />
-      < Contact />
-      < Footer />
-    </div>
+    </Router>
   );
 }
-
-export default App;
