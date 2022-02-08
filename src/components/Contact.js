@@ -14,7 +14,7 @@ export default function Contact() {
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
-                  <p>742 Evergreen Terrace</p>
+                  <p>12 Arlott House NE29 6PF</p>
                   <p>Newcastle Upon Tyne, UK</p>
                 </dd>
               </div>
@@ -37,7 +37,7 @@ export default function Contact() {
         </div>
         <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="max-w-lg mx-auto lg:max-w-none">
-            <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+            <form action="https://formsubmit.co/ba.alencarpacheco@gmail.com" method="POST" className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full-name" className="sr-only">
                   Name

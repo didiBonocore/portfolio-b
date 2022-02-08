@@ -1,3 +1,5 @@
+import logo from '../images/logo.jpg';
+
 const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Architecture', href: '/architecture' },
@@ -15,7 +17,7 @@ export default function Nav() {
               <span className="sr-only">Barbara Pacheco</span>
               <img
                 className="h-10 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
+                src={logo}
                 alt="Website Logo"
               />
             </a>
